@@ -16,6 +16,8 @@ public class ShatterMain : MonoBehaviour {
 
 	public GameObject player;
 
+	public Transform origloc;
+
 	public float walkingspeed = 0;
 
 	public string[] questions;
@@ -40,7 +42,13 @@ public class ShatterMain : MonoBehaviour {
 	public int scoremax;
 
 	public bool youwin = false;
+
+	public bool youwin1 = false;
+
+	public GameObject badge2;
 	public GameObject badge;
+
+	public Transform maincamtrans;
 
 	void Start () {
 		clevel = 0;
@@ -67,11 +75,31 @@ public class ShatterMain : MonoBehaviour {
 		canswer = cans[r];
 	}
 
-	//public void FixedUpdate()
-	//{
+	public void Update()
+	{
 	//	walkingspeed = (Mathf.Sqrt(Mathf.Lerp(walkingspeed, Input.GetAxis("Vertical")**2+ Input.GetAxis("Horizontal")**2)));
 		//player.GetComponent<
-	//}
+		if(clevel == 5)
+		{
+			Vector3 newvec;
+			float xpos = player.transform.position.x;
+			float ypos = player.transform.position.y;
+			newvec = new Vector3 (xpos, ypos, -10);
+			Camera.main.transform.position = newvec;
+			if(youwin1 == true)
+			{
+				badge2.SetActive(true);
+			}
+		}
+		else
+		{
+			Camera.main.transform.position = maincamtrans.position;
+			if(youwin1 == true)
+			{
+				badge2.SetActive(false);
+			}
+		}
+	}
 	
 	// Update is called once per frame
 	public void UpdateLevel (int nlevel) {
@@ -104,6 +132,9 @@ public class ShatterMain : MonoBehaviour {
 			scorego.GetComponent<Text>().text = ("Score: " + score);
 			canswer = cans[r];
 			badge.SetActive(false);
+			player.transform.position = origloc.position;
+			badge2.SetActive(false);
+			youwin1 = false;
 		}
 		if(Mathf.Abs(score) > scoremax)
 		{
