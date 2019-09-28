@@ -55,7 +55,7 @@ body {
 
 </head>
 <img src="https://www.shatterproof.org/sites/default/files/styles/mlp_large/public/2019-09/CSC_0037.JPG?itok=hRjHmAWR" align="right" alt="Avatar" class="right" style="width:40%;">
-<body>
+<body id=body>
 I had ruined my life entirely. In the last 19 years, I have gotten all of it back and so much more!
 I work every day to help others find what I have! I am surrounded by the people who helped me get clean and sober.
 My family has accepted me back and trusts me again. My son is my best friend. I get to be "Nana" to my 3 grandchildren and
@@ -73,36 +73,68 @@ I am a person in long term recovery and today I hold my head high when I say thi
 everyone can hold their head high and say the same for themselves!!
 <br>
 <h2>Chat Room</h2>
+<div id=divBody>
+  <div class="container darker">
+    <img src="https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/31-512.png" alt="Avatar" class="right" style="width:100%;">
+    <p> Hey, I want to know if you had any advice for me? My mom wants to get help to get over addiction, but everytime
+    she tries to get help, she thinks it won't work and gives up before trying. How can I get her help. I am just 14.</p>
+    <span class="time-left">1:00</span>
+  </div>
 
-<div class="container darker">
-  <img src="https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/31-512.png" alt="Avatar" class="right" style="width:100%;">
-  <p> Hey, I want to know if you had any advice for me? My mom wants to get help to get over addiction, but everytime
-  she tries to get help, she thinks it won't work and gives up before trying. How can I get her help. I am just 14.</p>
-  <span class="time-left">1:00</span>
-</div>
+  <div class="container">
+    <img src="https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/88-512.png" alt="Avatar" style="width:100%;">
+    <p>Thanks for reaching out to me, the best way to help your mom is to make her become more aware of the success
+    is to have her get involved with others who are going through the same situation, maybe even get her to talk to me. </p>
 
-<div class="container">
-  <img src="https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/88-512.png" alt="Avatar" style="width:100%;">
-  <p>Thanks for reaching out to me, the best way to help your mom is to make her become more aware of the success
-  is to have her get involved with others who are going through the same situation, maybe even get her to talk to me. </p>
+    <span class="time-right">1:05</span>
+  </div>
 
-  <span class="time-right">1:05</span>
-</div>
-
-<div class="container darker">
-  <img src="https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/31-512.png" alt="Avatar" class="right" style="width:100%;">
-  <p>yea, I will try, she does not like to get help, but I will try. Can we stay in touch?</p>
-  <span class="time-left">1:20</span>
-</div>
-
-<div class="container">
-  <img src="https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/88-512.png" alt="Avatar" style="width:100%;">
-  <p>Of course!</p>
-  <span class="time-right">1:45</span>
-</div>
+  <div class="container darker">
+    <img src="https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/31-512.png" alt="Avatar" class="right" style="width:100%;">
+    <p>yea, I will try, she does not like to get help, but I will try. Can we stay in touch?</p>
+    <span class="time-left">1:20</span>
+  </div> 
+ 
+</div >
 
 </body>
 Enter Comment here:
-<textarea rows="8" cols="129.5"> </textarea>
+<textarea id=commentText rows="8" cols="129.5"> </textarea>
 
-<input type="submit" value="Submit">
+ 
+
+
+<script>
+function addComment() {
+  var catDiv = document.createElement("div");
+ catDiv.classList.add("container");
+catDiv.innerHTML = "";
+document.getElementById("divBody").appendChild(catDiv);
+ 
+  var catImage = new Image();
+  catDiv.appendChild(catImage);
+  catImage.src="https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/88-512.png";
+  catImage.alt="Avatar";
+  catImage.style="width:100%;";
+
+  var catP = document.createElement("p");
+  catDiv.appendChild(catP);
+  catP.innerHTML= document.getElementById('commentText').value;
+ 
+  
+
+
+}
+</script>
+ 
+<button type="button" onclick="addComment()">Submit</button>
+ 
+
+
+
+
+
+
+
+
+
