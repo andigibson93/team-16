@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShatterMain : MonoBehaviour {
 
@@ -19,11 +20,11 @@ public class ShatterMain : MonoBehaviour {
 	public string[] answer3;
 	public string[] answer4;
 
-	public Text[] answers;
+	public GameObject[] answers;
 	public int[] cans;
 	public int canswer;
 	
-	public Text qtext;
+	public GameObject qtext;
 	public LLevel[] levels;
 
 	public int clevel;
@@ -63,8 +64,9 @@ public class ShatterMain : MonoBehaviour {
 
 	public void GenQ ()
 	{
-		int r = Math.RandomRange(0, questions.Length-1);
-		qtext.Text = questions[r];
+		int r = 0;
+		r = Random.Range(0, questions.Length-1);
+		qtext.GetComponent<Text>().text = questions[r];
 		answers[0] = answer1[r];
 		answers[1] = answer2[r];
 		answers[2] = answer3[r];
