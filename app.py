@@ -31,9 +31,13 @@ def signin():
 def volunteer():
     return render_template('volunteer.html')
 
-@app.route('/play')
-def play():
-    return render_template('play.html')
+@app.route('/surveyResults')
+def surveyResults():
+	return render_template('surveyResults.html')
+
+@app.route('/game')
+def game():
+    return render_template('game.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
