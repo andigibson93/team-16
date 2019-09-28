@@ -24,7 +24,10 @@ def survey():
     # show the form (wasn't submitted)
     return render_template('survey.html')
 
- 
+@app.route('/createPost', methods=['GET', 'POST']) 
+def createPost():
+    return render_template('createPost.html')
+
 @app.route('/signin', methods=['GET', 'POST']) 
 def signin():
     return render_template('signin.html')
