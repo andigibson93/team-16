@@ -1,65 +1,52 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://html5-templates.com/" />
-    <title>HTML Template - Full Page Slider Navigation</title>
-    <meta name="description" content="A brief page description">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#fullpage').fullpage({
-              sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-               
-              menu: '#menu',
-            });
-        });
-    </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bootstrap 4 Vertical Form Layout</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+    .bs-example{
+        margin: 20px;        
+    }
+</style>
 </head>
-
 <body>
-
-<ul id="menu">
-     
-</ul>
-
-<div id="fullpage">
-     
-    <div class="section" id="section1">
-        <div class="slide active" id="slide1">
-            <div class="intro">
-                <h2>Share my Story</h2>
-                <form>
- <br> Title:
-  <input type="text" name="Title"> 
- <br> Description: 
-  <input type="text" name="Description">
-
-
-  <br>Image: 
-  <input type="file" name="pic" accept="image/*"> 
-   <br>My Story: 
-  <br><textarea rows="40" cols="50"> </textarea>
-     <br>
-  <input type="submit" / >
-
-
-
-
-</form>
-            </div>
+<div class="bs-example">
+    <form action="/examples/actions/confirmation.php" method="post">
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="title" class="form-control"  required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="description" class="form-control"  required>
         </div>
         
+         <div class="form-group">
+            <label for="inputPassword">Image:</label>
+           
+           <input type="file" name="pic" accept="image/*">   </div>
+         <div class="form-group">
+            <label for="mystory">My Story</label>
+            <textarea class="form-control"  rows="5"  required> </textarea>  </div>
+         
 
-    </div>
-    
+
+
+
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
-
 </body>
+</html>                            
 
-</html>
+
+
+ 
