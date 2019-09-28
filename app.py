@@ -30,6 +30,9 @@ def survey():
 def volunteer():
 	return render_template('volunteer.html')
 
+@app.route('/surveyResults')
+def surveyResults():
+	return render_template('surveyResults.html')
 
 
 @app.route('/play')
