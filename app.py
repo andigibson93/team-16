@@ -19,15 +19,13 @@ def survey():
     # show the form (wasn't submitted)
     return render_template('survey.html')
 
-<<<<<<< HEAD
-@app.route('/signin', methods=['GET', 'POST']
+@app.route('/signin', methods=['GET', 'POST'])
 def signin():
     return render_template('signin.html')
 
 @app.route('/volunteer', methods=['GET', 'POST'])
-=======
+
 @app.route('/volunteer')
->>>>>>> 846b6901f922055655bb413cf6e70353c4bf21f2
 def volunteer():
     return render_template('volunteer.html')
 
