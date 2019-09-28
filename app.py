@@ -25,11 +25,11 @@ def survey():
     return render_template('survey.html')
 
  
-@app.route('/signin', methods=['GET', 'POST']
+@app.route('/signin', methods=['GET', 'POST']) 
 def signin():
     return render_template('signin.html')
 
-@app.route('/volunteer', methods=['GET', 'POST'])
+@app.route('/volunteer', methods=['GET', 'POST']) 
 def volunteer():
     return render_template('volunteer.html')
  
