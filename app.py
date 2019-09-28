@@ -19,11 +19,11 @@ def survey():
 
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
-     
-     
-
-    # show the form (wasn't submitted)
     return render_template('signin.html')
+
+@app.route('/volunteer', methods=['GET', 'POST'])
+def volunteer():
+    return render_template('volunteer.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
