@@ -32,7 +32,6 @@ def volunteer():
 
 
 
-
 @app.route('/play')
 def play():
     return render_template('play.html')
