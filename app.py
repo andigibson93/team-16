@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
+badges=[]
 
 @app.route("/")
 def index():
@@ -12,6 +13,8 @@ def survey():
 
         # redirect to end the POST handling
         # the redirect can be to the same route or somewhere else
+        badges.add("Survey Badge")
+
         return redirect(url_for('index'))
 
     # show the form (wasn't submitted)
@@ -23,7 +26,10 @@ def signin():
 
 @app.route('/volunteer', methods=['GET', 'POST'])
 def volunteer():
-    return render_template('volunteer.html')
+	return render_template('volunteer.html')
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
