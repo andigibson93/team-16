@@ -19,7 +19,7 @@ def survey():
         
 
         # redirect after POST handling, redirect can be to the same route or somewhere else
-        return redirect(url_for('index')) 
+        return redirect(url_for('surveyResults'))
 
     # show the form (wasn't submitted)
     return render_template('survey.html')

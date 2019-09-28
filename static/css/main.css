@@ -526,3 +526,7 @@ p.introimg {
 #slidesmalltext {
     font-size: 175%;
 }
+
+#slide1 {
+    background-image: url("images/bg_addiction.jpg")
+}

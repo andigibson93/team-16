@@ -103,8 +103,12 @@ public class ShatterMain : MonoBehaviour {
 	
 	// Update is called once per frame
 	public void UpdateLevel (int nlevel) {
+		player.transform.position = origloc.position;
+		badge2.SetActive(false);
+		youwin1 = false;
 		foreach(LLevel level in levels)
 		{
+			
 			if(nlevel != level.levelnum)
 			{
 				level.levelobjs.SetActive(false);
@@ -120,6 +124,9 @@ public class ShatterMain : MonoBehaviour {
 
 	public void GenQ ()
 	{
+		player.transform.position = origloc.position;
+		badge2.SetActive(false);
+		youwin1 = false;
 		if(youwin == false)
 		{
 			int r = 0;
@@ -133,8 +140,7 @@ public class ShatterMain : MonoBehaviour {
 			canswer = cans[r];
 			badge.SetActive(false);
 			player.transform.position = origloc.position;
-			badge2.SetActive(false);
-			youwin1 = false;
+			
 		}
 		if(Mathf.Abs(score) > scoremax)
 		{
