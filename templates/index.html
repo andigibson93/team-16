@@ -31,30 +31,47 @@
 </ul>
 
 <div id="fullpage">
-    <div class="section " id="section0">
+    <div class="section active" id="section0">
         <h1>Shatter</h1>
-        <p>A little description</p>
-        <ul id="midmenu">
-            <li data-menuanchor="Sign in"><a href="{{ url_for('signin') }}">Sign in</a></li>
-            <li data-menuanchor="Take our survey"><a href="{{ url_for('survey') }}">Take our survey</a></li>
-            <li data-menuanchor="Volunteer"><a href="{{ url_for('volunteer') }}">Volunteer</a></li>
-              </ul>
+        <p>Has you or a loved one been affected by an opioid addiction?</p>
+        <p>Would you like to get involved in our mission to end the epidemic?</p>
+        <p id="slidesmalltext">Opiod addiction is a serious chronic illness and needs to be addressed</p>
+
         <br><br><br><br>
         <p class="introimg">&darr;&#9636;&darr;</p>
     </div>
-    <div class="section active" id="section1">
-        <div class="slide" id="slide1">
+    <div class="section" id="section1">
+        <div class="slide active" id="slide1">
             <div class="intro">
-                <h1>info1</h1>
-                <p>Keep scrolling down</p>
+                <h1>Facing Addiction?</h1>
+                <br>
+                <p>Random fact about the opioid crisis</p>
+                <ul id="midmenu">
+                    <li data-menuanchor="Take our survey"><a href="{{ url_for('survey') }}">Take our survey</a></li>
+                </ul>
             </div>
         </div>
-        <div class="slide active" id="slide2">
-            <h1>info2</h1>
-			<p>You can also scroll left or right on this screen</p>
+        <div class="slide" id="slide2">
+            <div class="intro">
+                <h1>Get Involved</h1>
+                <br>
+                <p>Join the national movement combatting opioid addiction by signing up to volunteer for one of our events</p>
+                <ul id="midmenu">
+                    <li data-menuanchor="Sign Up"><a href="{{ url_for('volunteer') }}">Sign Up</a></li>
+                </ul>
+            </div>
         </div>
         <div class="slide" id="slide3">
-            <h1>info3</h1>
+            <h1>Shattering Stigmas</h1>
+            <br>
+            <p id="slidesmalltext"><strong>Stigmas</strong> hold back affected individuals and their loved ones every day.</p>
+            <p id="slidesmalltext">We believe in educating people about stigmas and their adverse effect in the treatment process.</p>
+            <p id="slidesmalltext">Play this fun little game to test your smarts about stigmas</p>
+            <p id="slidesmalltext">[Emjois] Play to earn a badge! [Emjois]</p>
+            <ul id="midmenu">
+                <li data-menuanchor="Play!"><a href="{{ url_for('play') }}">Play!</a></li>
+            </ul>
+            
         </div>
 
     </div>

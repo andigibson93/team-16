@@ -207,7 +207,7 @@ html.fp-enabled,
     top: -2px;
     color: #fff;
     font-size: 14px;
-    font-family: arial, helvetica, sans-serif;
+    font-family: garamond, arial, sans-serif;
     white-space: nowrap;
     max-width: 220px;
     overflow: hidden;
@@ -287,7 +287,7 @@ abbr,acronym { border: 0;
 /* Custom CSS
  * --------------------------------------- */
 body{
-	font-family: arial,helvetica;
+	font-family: 'Trebuchet MS', arial;
 	color: #333;
 	color: rgba(0,0,0,0.5);
 }
@@ -389,7 +389,7 @@ p {
 	color: #fff;
 }
 #midmenu {
-	position:fixed;
+	/* position:fixed; */
 	height: 40px;
 	z-index: 70;
 	width: 100%;
@@ -520,3 +520,7 @@ p.introimg {
     line-height: 1em;
 }
 
+/* slidesmalltext */
+#slidesmalltext {
+    font-size: 175%;
+}
