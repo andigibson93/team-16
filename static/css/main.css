@@ -89,6 +89,7 @@ html.fp-enabled,
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+    opacity: 0.8;
 }
 .fp-controlArrow.fp-prev {
     left: 15px;
@@ -572,11 +573,17 @@ p.introimg {
 
 /* media query for mobile */
 @media screen and (max-width: 481px) {
+    #menu {
+        height: 70px;
+    }
     h1 {
-        font-size: 4em;
+        font-size: 2em;
     }
     p {
         font-size: 1em;
+    }
+    #slidesmalltext {
+        font-size: 100%;
     }
     #midmenu {
         font-size: 100%;
