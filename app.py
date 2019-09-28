@@ -19,12 +19,15 @@ def survey():
         
 
         # redirect after POST handling, redirect can be to the same route or somewhere else
-        return redirect(url_for('index')) 
+        return redirect(url_for('surveyResults'))
 
     # show the form (wasn't submitted)
     return render_template('survey.html')
 
- 
+@app.route('/createPost', methods=['GET', 'POST']) 
+def createPost():
+    return render_template('createPost.html')
+
 @app.route('/signin', methods=['GET', 'POST']) 
 def signin():
     return render_template('signin.html')
@@ -36,17 +39,18 @@ def volunteer():
 @app.route('/viewBadges', methods=['GET'])
 def viewBadges():
 	return render_template('viewBadges.html')
-
-
-
  
 @app.route('/surveyResults')
 def surveyResults():
-	return render_template('surveyResults.html') 
+	return render_template('surveyResults.html')
 
 @app.route('/game')
 def game():
     return render_template('game.html')
+
+@app.route('/forum')
+def forum():
+	return render_template('forum.html') 
 
 if __name__ == "__main__":
     app.run(debug=True)
