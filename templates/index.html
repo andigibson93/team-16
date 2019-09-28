@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShatterSpark - An Interactive Connection to Shatterproof</title>
     <meta name="description" content="An interactive connection to Shatterproof">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.socialfeed.css') }}">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/doT.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/moment.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.socialfeed.js') }}"></script>
+
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -31,8 +39,9 @@
 
 <div id="fullpage">
     <div class="section active" id="section0">
+        <img src="{{ url_for('static', filename='favicon.ico') }}">
         <h1>ShatterSpark</h1>
-        <p>Has you or a loved one been affected by an opioid addiction?</p>
+        <p>Have you or a loved one been affected by an opioid addiction?</p>
         <p>Would you like to get involved in our mission to end the epidemic?</p>
         <p id="slidesmalltext">Opiod addiction is a serious chronic illness and needs to be addressed</p>
 
@@ -60,6 +69,10 @@
                 <ul id="midmenu">
                     <li data-menuanchor="Sign Up"><a href="{{ url_for('volunteer') }}">Sign Up</a></li>
                 </ul>
+                <br><br>
+                <div class="social-feed-container">
+                    <p>Social media feed:</p>
+                </div>
             </div>
         </div>
         <div class="slide" id="slide3">
@@ -72,8 +85,15 @@
             <ul id="midmenu">
                 <li data-menuanchor="Play!"><a href="{{ url_for('game') }}">Play!</a></li>
             </ul>
-            
         </div>
+        <div class="slide" id="slide4">
+                <h1>Forum</h1>
+                <br>
+                <p>Building a community of individuals who share inspiring stories</p>
+                <ul id="midmenu">
+                    <li data-menuanchor="Visit Forum"><a href="{{ url_for('forum') }}">Visit Forum</a></li>
+                </ul>
+            </div>
 
     </div>
     <div class="section" id="section2">
