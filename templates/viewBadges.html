@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://html5-templates.com/" />
+    <title>HTML Template - Full Page Slider Navigation</title>
+    <meta name="description" content="A brief page description">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+              sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+               
+              menu: '#menu',
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+<ul id="menu">
+     
+</ul>
+
+<div id="fullpage">
+     
+    <div class="section" id="section1">
+        <div class="slide active" id="slide1">
+            <div class="intro">
+                <h1>Badges Earned</h1>
+                <br>
+                <img src="https://gamipress.com/wp-content/uploads/edd/2019/05/featured-image.png" alt="You have taken the survey!">
+                 
+            </div>
+        </div>
+        
+
+    </div>
+    
+</div>
+
+</body>
+
+</html>

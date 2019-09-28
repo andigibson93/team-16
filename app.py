@@ -11,17 +11,9 @@ def index():
 @app.route('/survey', methods=['GET', 'POST'])
 def survey():
     if request.method == 'POST':
-        # form submitted
-        
- 
-        # redirect to end the POST handling
-        # the redirect can be to the same route or somewhere else
-        badges.add("Survey Badge")
-
- 
-        # redirect after POST handling, redirect can be to the same route or somewhere else
- 
-        return redirect(url_for('index'))
+    	badges.add("Survey badge")
+    	print(badges.get(0))
+    	return redirect(url_for('surveyResults.html'))
 
     # show the form (wasn't submitted)
     return render_template('survey.html')
@@ -29,6 +21,12 @@ def survey():
 @app.route('/volunteer')
 def volunteer():
 	return render_template('volunteer.html')
+
+
+
+@app.route('/viewBadges', methods=['GET'])
+def viewBadges():
+	return render_template('viewBadges.html')
 
 
 
