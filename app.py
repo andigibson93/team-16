@@ -36,17 +36,18 @@ def volunteer():
 @app.route('/viewBadges', methods=['GET'])
 def viewBadges():
 	return render_template('viewBadges.html')
-
-
-
  
 @app.route('/surveyResults')
 def surveyResults():
-	return render_template('surveyResults.html') 
+	return render_template('surveyResults.html')
 
 @app.route('/game')
 def game():
     return render_template('game.html')
+
+@app.route('/forum')
+def forum():
+	return render_template('forum.html') 
 
 if __name__ == "__main__":
     app.run(debug=True)
