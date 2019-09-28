@@ -276,7 +276,7 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 100%;
     margin:0;
     padding:0;
-    color:#444;
+    color:rgb(223, 215, 215);
 }
 q:before,q:after {
     content:'';
@@ -522,11 +522,29 @@ p.introimg {
     line-height: 1em;
 }
 
-/* slidesmalltext */
+/* more custom CSS */
 #slidesmalltext {
     font-size: 175%;
 }
 
 #slide1 {
-    background-image: url("images/bg_addiction.jpg")
+    background-image: url("/static/images/bg_addiction.jpg");
+    background-size: cover;
+}
+
+#slide2 {
+    background-image: url("/static/images/bg_riseup2.jpg");
+    background-size: cover;
+}
+
+/* #slides {
+    color: rgb(223, 215, 215);
+}
+
+#slides2 {
+    color: rgb(0, 0, 0);
+} */
+
+.intro {
+    background-color: #969696;
 }
