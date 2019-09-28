@@ -3,17 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
-    <title>ShatterSpark - An Interactive Connection to Shatterproof</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Interactive Connection to Shatterproof</title>
     <meta name="description" content="An interactive connection to Shatterproof">
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-        
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <script type="text/javascript">
@@ -25,34 +20,23 @@
             });
         });
     </script>
-
-<style>
-    .bs-example{
-        margin: 20px;        
-    }
-</style>
 </head>
-
-
-
-
-
 
 <body>
 
 <ul id="menu">
-    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">ShatterSpark</a></li>
+    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Shatterproof</a></li>
     <li data-menuanchor="secondPage"><a href="#secondPage">Our Resources</a></li>
     <li data-menuanchor="3rdPage"><a href="#3rdPage">About Us</a></li>
 </ul>
 
 <div id="fullpage">
     <div class="section active" id="section0">
-        <img src="{{ url_for('static', filename='favicon.ico') }}" height=175px width=175px>
-        <h1>ShatterProof</h1>
-        <h2>Have you or a loved one been affected by an opioid addiction?</h2>
-        <h2>Would you like to get involved in our mission to end the epidemic?</h2>
-        <h2 id="slidesmalltext">Opiod addiction is a serious chronic illness and needs to be addressed</h2>
+        <img src="{{ url_for('static', filename='images/shatterproof.png') }}" height=175px width=175px>
+        <h1>Shatterproof</h1>
+        <p><strong>Are you OR do you know a victim of opioid addiction?</strong></p>
+        <p><strong>Would you like to get involved in our mission to end the epidemic?</strong></p>
+        <p id="slidesmalltext"><strong>Opioid addiction is a serious chronic illness that needs to be addressed</strong></p>
 
         <br><br><br><br>
         <p class="introimg">&darr;&#9636;&darr;</p>
@@ -61,11 +45,11 @@
         <div class="slide active" id="slide1">
             <div class="intro">
                 <br>
-                <h1>Facing Addiction?</h1>
+                <h1>Facing an Addiction?</h1>
                 <br>
-                <h2 id="slides">Get connected to the resources you need.</h2>
+                <p id="slides">Get connected to the resources you need</p>
                 <ul id="midmenu">
-                    <li data-menuanchor="Take our survey to guide you in the right direction."><a href="{{ url_for('survey') }}">Take our survey </a></li>
+                    <li data-menuanchor="Take our survey"><a href="{{ url_for('survey') }}">Take our survey</a></li>
                     <li data-menuanchor="View your badges"><a href="{{ url_for('viewBadges') }}">View your Badges</a></li>
                 </ul>
                 <br><br>
@@ -85,12 +69,12 @@
         </div>
         <div class="slide" id="slide3">
             <br>
-            <h1>Shattering Stigmas</h1>
+            <h1 id="titlered">Shattering Stigmas</h1>
             <br>
-            <h2 id="slidesmalltext"><strong>Stigmas</strong> hold back affected individuals and their loved ones every day.</h2>
-            <h2 id="slidesmalltext">We believe in educating people about stigmas and their adverse effect in the treatment process.</h2>
-            <h2 id="slidesmalltext">Play this fun little game to test your smarts about stigmas</h2>
-            <h2 id="slidesmalltext">[Emjois] Play to earn a badge! [Emjois]</h2>
+            <p id="slidesmalltext"><strong>Stigmas</strong> hold back affected individuals and their loved ones every day.</p>
+            <p id="slidesmalltext">We believe in educating people about stigmas and their adverse effect in the treatment process.</p>
+            <p id="slidesmalltext">Play this fun little game to test your smarts about stigmas</p>
+            <p id="slidesmalltext">📛 Play to earn a badge! 🥇</p>
             <ul id="midmenu">
                 <li data-menuanchor="Play!"><a href="{{ url_for('game') }}">Play!</a></li>
             </ul>
@@ -102,8 +86,8 @@
                 <br>
                 <p id="slides">Building a community of individuals who share inspiring stories</p>
                 <ul id="midmenu">
-                        <li data-menuanchor="Visit Forum"><a href="{{ url_for('forum') }}">Visit Forum</a></li> 
-                        <li data-menuanchor="Share your story"><a href="{{ url_for('createPost') }}">Share your story</a></li>
+                    <li data-menuanchor="Visit Forum"><a href="{{ url_for('forum') }}">Visit Forum</a></li> 
+                    <li data-menuanchor="Share your story"><a href="{{ url_for('createPost') }}">Share your story</a></li>
                 </ul>
                 <br><br>
             </div>
@@ -111,15 +95,16 @@
 
     </div>
     <div class="section" id="section2">
-        <div class="intro">
-            <h1>About Us</h1>
-            <br>
-            <p>Visit our main website at <a href="https://www.shatterproof.org/" target="_blank">https://www.shatterproof.org/</a></p>
-            <br><br>
-            <p><strong>Read</strong> and submit success stories</p>
-            <p><strong>Learn</strong> more about the national stigma strategy</p>
-            <p><strong>Join</strong> a local Rise Up Against Addiction 5K</p>
-        </div>
+        <!-- <div class="intro">
+
+        </div> -->
+        <h1>About Us</h1>
+        <br>
+        <p>Visit our main website at <a href="https://www.shatterproof.org/" target="_blank">https://www.shatterproof.org/</a></p>
+        <br><br>
+        <p><strong>Read</strong> and submit success stories</p>
+        <p><strong>Learn</strong> more about the national stigma strategy</p>
+        <p><strong>Join</strong> a local Rise Up Against Addiction 5K</p>
     </div>
 </div>
 

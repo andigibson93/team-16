@@ -309,6 +309,7 @@ p {
 	margin: 0 auto;
 	font-size: 1.5em;
 }
+
 .section{
 	text-align:center;
 }
@@ -527,6 +528,11 @@ p.introimg {
     font-size: 175%;
 }
 
+#section0 {
+    background-image: url("/static/images/bg_abstractpurple.jpg");
+    background-size: cover;
+}
+
 #slide1 {
     background-image: url("/static/images/bg_addiction.jpg");
     background-size: cover;
@@ -534,6 +540,16 @@ p.introimg {
 
 #slide2 {
     background-image: url("/static/images/bg_riseup2.jpg");
+    background-size: cover;
+}
+
+#slide3 {
+    background-image: url("/static/images/bg_city.jpg");
+    background-size: cover;
+}
+
+#slide4 {
+    background-image: url("/static/images/bg_park.jpg");
     background-size: cover;
 }
 
@@ -547,4 +563,22 @@ p.introimg {
 
 .intro {
     background-color: #969696;
+    opacity: 0.9;
+}
+
+#titlered {
+    color: #e93434;
+}
+
+/* media query for mobile */
+@media screen and (max-width: 481px) {
+    h1 {
+        font-size: 4em;
+    }
+    p {
+        font-size: 1em;
+    }
+    #midmenu {
+        font-size: 100%;
+    }
 }
