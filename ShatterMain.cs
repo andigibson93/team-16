@@ -67,10 +67,10 @@ public class ShatterMain : MonoBehaviour {
 		int r = 0;
 		r = Random.Range(0, questions.Length-1);
 		qtext.GetComponent<Text>().text = questions[r];
-		answers[0] = answer1[r];
-		answers[1] = answer2[r];
-		answers[2] = answer3[r];
-		answers[3] = answer4[r];
+		answers[0].GetComponent<Text>().text = answer1[r];
+		answers[1].GetComponent<Text>().text = answer2[r];
+		answers[2].GetComponent<Text>().text = answer3[r];
+		answers[3].GetComponent<Text>().text = answer4[r];
 		canswer = cans[r];
 	}
 
